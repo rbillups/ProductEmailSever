@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>SaSN Product Email Sever</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-    <form action="/process_data" method="POST">
+    <form action="/send_email" method="POST">
         <h1>Enter email:</h1>
-        <input type="text" id="userInput" name="userInput" placeholder="Type something...">
+        <input type="text" id="userInput" name="email" placeholder="Type something...">
 
         <h2>Select an option:</h2>
         <div class="button-container">
-            <button class="square-round-button" id="option1" name="selectedOption" value="1" onclick="selectOption(1)">1</button>
-            <button class="square-round-button" id="option2" name="selectedOption" value="2" onclick="selectOption(2)">2</button>
-            <button class="square-round-button" id="option3" name="selectedOption" value="3" onclick="selectOption(3)">3</button>
+            <button class="square-round-button" id="option1" name="selectedOption" value="Boxing Shoe" onclick="selectOption(1)">Boxing Shoe</button>
+            <button class="square-round-button" id="option2" name="selectedOption" value="Running Bag" onclick="selectOption(2)">Running Bag</button>
+            <button class="square-round-button" id="option3" name="selectedOption" value="Bundle" onclick="selectOption(3)">Bundle</button>
         </div>
 
-        <button id="sendButton" type="submit">Send</button>
-        <button type="button" id="resetButton" onclick="resetForm()">Reset</button>
+        
 
     </form>
     <script>
@@ -37,10 +36,8 @@
                 document.getElementById("option" + i).style.backgroundColor = "#007bff";
             }
         }
-        function resetForm() {
-        document.getElementById("myForm").reset();  // Reset the form
-        resetButtons();  // Reset the selected option buttons
-    }
+
+        
     </script>
 </body>
 </html>
